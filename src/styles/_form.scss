@@ -1,0 +1,58 @@
+.form {
+    &__inp {
+        font-family: 'Nunito Sans', sans-serif;
+        width: calc(100vw - 30px);
+        max-width: 220px;
+        padding: 6px 10px;
+        border: none;
+        outline: none;
+
+        &-password {
+            padding-right: 32px;
+        }
+    }
+
+    &__password {
+        position: relative;
+
+        &-icon {
+            position: absolute;
+            color: black;
+            right: 5px;
+            top: 50%;
+            translate: 0 -50%;
+            font-size: 22px;
+            cursor: pointer;
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        font-weight: 200;
+    }
+    
+    &__checkbox {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        color: white;
+        cursor: pointer;
+
+        &-box {
+            font-size: 20px;
+        }
+
+        &-mark {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+        }
+    }
+}
