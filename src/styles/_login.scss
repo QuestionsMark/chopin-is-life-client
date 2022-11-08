@@ -1,0 +1,133 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+        width: 400px;
+    }
+    
+    &__form {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 15px;
+        align-items: center;
+        padding-top: 15px;
+        border-top-left-radius: 20px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        background-color: black;
+    }
+
+    &__keyboard {
+        display: flex;
+        width: 384;
+        height: 46px;
+        color: black;
+        overflow: hidden;
+        
+        &-part {
+            position: relative;
+            display: flex;
+            width: 128px;
+
+            &--btn {
+                font-family: 'Nunito Sans', sans-serif;
+                font-size: 18px;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+
+                &:hover > div {
+                    padding-bottom: 2px;
+                }
+            }
+
+            & > div {
+                transition: padding 0.1s;
+                &:hover {
+                    background-color: $main-color;
+                }
+            }
+
+            & > .wk {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+                flex-basis: calc(128px / 7);
+                flex-shrink: 0;
+                height: 100%;
+                border-right: 2px solid black;
+                background-color: white;
+            }
+
+            & > .bk {
+                position: absolute;
+                width: 14px;
+                height: 24px;
+                border: 2px solid black;
+                border-top: none;
+                background-color: black;
+            }
+        }
+    }
+
+    &__soundbox {
+        display: flex;
+        height: 220px;
+
+        & > div {
+            &:nth-child(1) {
+                flex-grow: 1;
+                background-color: black;
+
+                & > div {
+                    width: 100%;
+                    height: 100%;
+                    border-bottom-right-radius: 90px;
+                    background-color: $background-color;
+                }
+            }
+            &:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 260px;
+                border-top-left-radius: 50%;
+                border-top-right-radius: 50%;
+                background-color: black;
+            }
+        }
+    }
+
+    &__logo {
+        font-size: 56px;
+
+        &-title {
+            font-size: 20px;
+            font-weight: 200;
+            letter-spacing: 4px;
+        }
+    }
+}
+
+.bk {
+    &:nth-last-of-type(1) {
+        left: 9px;
+    }
+    &:nth-last-of-type(2) {
+        left: 28px;
+    }
+    &:nth-last-of-type(3) {
+        left: 64px;
+    }
+    &:nth-last-of-type(4) {
+        left: 83px;
+    }
+    &:nth-last-of-type(5) {
+        left: 102px;
+    }
+}
