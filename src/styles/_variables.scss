@@ -1,0 +1,21 @@
+$main-color: #bacaf8;
+$background-color: #202124;
+$font-color: #404555;
+
+$sm-mobile: 400px;
+$md-mobile: 520px;
+$lg-mobile: 780px;
+$sm-pc: 1024px;
+$md-pc: 1366px;
+$lg-pc: 1500px;
+
+
+:root {
+    --header-height: 60px;
+    --header-logo-size: calc(var(--header-height) - 20px);
+    
+    @media (min-width: $md-mobile) {
+        --header-height: 80px;
+        --header-logo-size: calc(var(--header-height) - 30px);
+    }
+}

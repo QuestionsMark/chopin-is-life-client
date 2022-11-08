@@ -1,0 +1,15 @@
+html {
+    color: #eee;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body {
+    background-color: $background-color;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
