@@ -1,11 +1,13 @@
 .form {
     &__inp {
-        font-family: 'Nunito Sans', sans-serif;
-        width: calc(100vw - 30px);
+        font-family: $main-font-family;
+        width: 100%;
         max-width: 220px;
         padding: 6px 10px;
         border: none;
         outline: none;
+        color: $main-color;
+        background-color: $background-color;
 
         &-password {
             padding-right: 32px;
@@ -14,10 +16,12 @@
 
     &__password {
         position: relative;
+        width: 100%;
+        max-width: 220px;
 
         &-icon {
             position: absolute;
-            color: black;
+            color: $main-color;
             right: 5px;
             top: 50%;
             translate: 0 -50%;
@@ -34,13 +38,14 @@
     }
     
     &__checkbox {
+        flex-shrink: 0;
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         width: 26px;
         height: 26px;
-        color: white;
+        color: $main-color;
         cursor: pointer;
 
         &-box {
@@ -51,8 +56,8 @@
             position: absolute;
             left: 50%;
             top: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 26px;
+            transform: translate(-45%, -60%);
+            font-size: 24px;
         }
     }
 }

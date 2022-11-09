@@ -1,6 +1,23 @@
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $main-color;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
 html {
-    color: #eee;
-    font-family: 'Nunito Sans', sans-serif;
+    color: $light-font-color;
+    font-family: $main-font-family;
+
+    // Firefox scrollbar styles
+    scrollbar-width: thin;
+    scrollbar-color: $main-color transparent;
 }
 
 body {
@@ -12,4 +29,95 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding-top: var(--header-height);
+}
+
+.section {
+    padding: 20px;
+    background-color: $main-color;
+    white-space: pre-wrap;
+    color: $font-color;
+
+    &--flex {
+        display: flex;
+    }
+
+    &--center {
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-icon {
+            font-size: 40px;
+            color: $font-color;
+        }
+
+        &-text {
+            color: $font-color;
+        }
+    }
+}
+
+.btn {
+    min-width: 80px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: $main-color;
+    font-family: $main-font-family;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: #8ea0d6;
+    }
+
+    &:disabled {
+        color: #8795bd;
+        cursor: default;
+
+        &:hover {
+            background-color: $main-color;
+        }
+    }
+}
+
+.link {
+    color: $main-color;
+    text-decoration: none;
+    width: fit-content;
+    cursor: pointer;
+
+    &-block {
+        display: block;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.paragraph {
+    color: $font-color;
+
+    &--indent {
+        text-indent: 25px;
+    }
+
+    &--end {
+        margin-bottom: 15px;
+    }
+}
+
+.strong {
+    font-weight: bold;
 }
