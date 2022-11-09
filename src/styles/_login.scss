@@ -2,9 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: calc(var(--header-height) + 15px);
 
     &__wrapper {
-        width: 400px;
+        width: calc(100vw - 30px);
+        max-width: 400px;
+        // margin-top: calc(var(--header-height) * -2);
     }
     
     &__form {
@@ -12,27 +15,44 @@
         flex-flow: column wrap;
         gap: 15px;
         align-items: center;
-        padding-top: 15px;
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 6px;
+        padding: 15px;
         background-color: black;
+        color: $main-color;
+
+        @media (min-width: 430px) {
+            border-top-left-radius: 20px;
+        }
+    }
+
+    &__label {
+        padding: 0 10px;
+        font-size: 14px;
     }
 
     &__keyboard {
         display: flex;
-        width: 384;
+        max-width: 384;
         height: 46px;
-        color: black;
+        padding: 0 12px 0 9px;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        background-color: black;
         overflow: hidden;
+
+        &-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+        }
         
         &-part {
+            flex-shrink: 0;
             position: relative;
             display: flex;
             width: 128px;
 
             &--btn {
-                font-family: 'Nunito Sans', sans-serif;
+                font-family: $main-font-family;
                 font-size: 18px;
                 background-color: transparent;
                 border: none;
@@ -75,12 +95,19 @@
 
     &__soundbox {
         display: flex;
+        width: 100%;
+        color: $main-color;
         height: 220px;
 
         & > div {
             &:nth-child(1) {
+                display: none;
                 flex-grow: 1;
                 background-color: black;
+
+                @media (min-width: 430px) {
+                    display: block;
+                }
 
                 & > div {
                     width: 100%;
@@ -90,15 +117,21 @@
                 }
             }
             &:nth-child(2) {
+                flex-grow: 1;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 15px;
-                width: 260px;
-                border-top-left-radius: 50%;
-                border-top-right-radius: 50%;
+                padding: 15px;
+                border-top-left-radius: 220px;
+                border-top-right-radius: 220px;
                 background-color: black;
+
+                @media (min-width: 430px) {
+                    width: 260px;
+                    flex-grow: 0;
+                }
             }
         }
     }
@@ -110,7 +143,13 @@
             font-size: 20px;
             font-weight: 200;
             letter-spacing: 4px;
+            text-align: center;
         }
+    }
+
+    &__paragraph {
+        margin-top: 30px;
+        color: $light-font-color;
     }
 }
 

@@ -1,11 +1,14 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { Form } from "../../components/common/Form";
+import { Paragraph } from "../../components/common/Paragraph";
 import { Checkbox } from "../../components/form-elements/Checkbox";
 import { EmailInput } from "../../components/form-elements/EmailInput";
 import { Label } from "../../components/form-elements/Label";
 import { PasswordInput } from "../../components/form-elements/PasswordInput";
 import { SoundBox } from "./SoundBox";
-import { SubmitKeyboard } from "./SubmitKeyboard";
+import { Keyboard } from "./Keyboard";
+import { Button } from "../../components/common/Button";
 
 export const Login = () => {
     const [email, setEmail] = useState('');
@@ -27,11 +30,19 @@ export const Login = () => {
                 >
                     <EmailInput handleChange={v => setEmail(v)} value={email} />
                     <PasswordInput handleChange={v => setPassword(v)} value={password} />
-                    <Label value="Remember me." onClick={() => setRemember(state => !state)}>
+                    <Label
+                        value="Remember me."
+                        onClick={() => setRemember(state => !state)}
+                        className="login__label"
+                    >
                         <Checkbox checked={remember} />
                     </Label>
-                    <SubmitKeyboard />
+                    <Button>Login</Button>
                 </Form>
+                <Keyboard />
+                <Paragraph indent={false} className="login__paragraph">
+                    If u don't have an account yet, <Link to="/signup" className="link login__link">sign up here!</Link>
+                </Paragraph>
             </div>
         </main>
     );

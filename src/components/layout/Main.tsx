@@ -8,6 +8,7 @@ import { Login } from "../../views/login/Login";
 import { NotFound } from '../../views/not-found/NotFound';
 import { Performance } from '../../views/performance/Performance';
 import { Profile } from '../../views/profile/Profile';
+import { Register } from '../../views/register/Register';
 import { Rules } from '../../views/rules/Rules';
 
 export const Main = () => {
@@ -15,6 +16,7 @@ export const Main = () => {
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Register />} />
             <Route path="/rules" element={<Rules />} />
             <Route path="/help" element={<Help />} />
             <Route path="/creation" element={<Creation />} />
