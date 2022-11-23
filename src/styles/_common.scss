@@ -22,32 +22,57 @@ html {
 
 body {
     background-color: $background-color;
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .main {
     display: flex;
     flex-direction: column;
+    width: calc(100vw - 30px);
+    max-width: 1300px;
     min-height: 100vh;
-    padding-top: var(--header-height);
+    padding: calc(var(--header-height) + 15px) 0 15px;
+    margin: 0 auto;
 }
 
 .section {
-    padding: 20px;
-    background-color: $main-color;
-    white-space: pre-wrap;
-    color: $font-color;
+    margin-bottom: 15px;
+    background-color: #313131;
+    
+    color: $light-font-color;
 
-    &--flex {
-        display: flex;
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
     }
 
-    &--center {
-        justify-content: center;
+    &--title {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        overflow: hidden;
     }
 
     &__title {
+        padding: 15px;
+        // margin-bottom: 10px;
         font-size: 20px;
-        margin-bottom: 10px;
+        color: $light-font-color;
+        background-color: $main-color2;
+    }
+
+    &__content {
+        padding: 15px;
+        white-space: pre-wrap;
+
+        &--flex {
+            display: flex;
+        }
+    
+        &--center {
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -91,6 +116,10 @@ body {
     }
 }
 
+.title {
+    font-size: 26px;
+}
+
 .link {
     color: $main-color;
     text-decoration: none;
@@ -107,7 +136,7 @@ body {
 }
 
 .paragraph {
-    color: $font-color;
+    color: $light-font-color;
 
     &--indent {
         text-indent: 25px;
