@@ -11,9 +11,11 @@ interface Props {
 
 export const Section = ({ children, center, className, title, titleClassName, flex }: Props) => {
     return (
-        <section className={`section${flex ? ' section--flex' : ''}${center ? ' section--center' : ''}${className ? ' ' + className : ''}`}>
+        <section className={`section${title ? ' section--title' : ''}${className ? ' ' + className : ''}`}>
             {title && <h2 className={`section__title${titleClassName ? ' ' + titleClassName : ''}`}>{title}</h2>}
-            {children}
+            <div className={`section__content${flex ? ' section__content--flex' : ''}${center ? ' section__content--center' : ''}`}>
+                {children}
+            </div>
         </section>
     );
 };
