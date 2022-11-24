@@ -65,6 +65,10 @@ body {
         padding: 15px;
         white-space: pre-wrap;
 
+        &--no-padding {
+            padding: 0;
+        }
+
         &--flex {
             display: flex;
         }
@@ -149,4 +153,20 @@ body {
 
 .strong {
     font-weight: bold;
+}
+
+.img {
+    user-select: none;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+
+    &--radius {
+        border-radius: 10px;
+    }
+
+    &--fit {
+        height: 100%;
+    }
 }
