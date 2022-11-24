@@ -1,0 +1,96 @@
+.baner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.9/1;
+
+    &__curtain {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        // backdrop-filter: blur(10px);
+    }
+
+    &__container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        opacity: 0;
+        transition: 0.5s;
+
+        &-active {
+            opacity: 1;
+        }
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__description {
+        position: absolute;
+        left: 15px;
+        bottom: 72px;
+        right: 15px;
+        padding: 15px;
+        transition: background-color 0.5s;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.6);
+        }
+        
+
+        &-title {
+
+        }
+
+        &-text {
+
+        }
+    }
+
+    &__dashboard {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        position: absolute;
+        left: 50%;
+        bottom: 15px;
+        translate: -50%;
+        min-width: 100px;
+        padding: 15px;
+        border-radius: 10px;
+        background-color: rgba(0,0,0,0.4);
+
+        &-dot {
+            width: 12px;
+            height: 12px;
+            // border: 1px solid $main-color;
+            border-radius: 50%;
+            background-color: $main-color2;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $main-color;
+            }
+
+            &--active {
+                background-color: $main-color;
+
+                &:hover {
+                    background-color: $main-color;
+                }
+            }
+        }
+    }
+}
