@@ -10,11 +10,9 @@ interface Props {
 
 export const Baner = ({ slides, isStatic }: Props) => {
     const [index, setIndex] = useState(0);
-    //
     if (slides.length < 1) return null;
-    //
 
-    const { alt, src, text, title } = slides[index];
+    const { text, title } = slides[index];
 
     const slidesList = () => {
         return slides.map((s, i) => <Slide key={String(i)} slide={s} isActive={i === index} isStatic={isStatic} />);
@@ -26,7 +24,6 @@ export const Baner = ({ slides, isStatic }: Props) => {
 
     return (
         <div className="baner">
-            {/* <Image alt={alt} src={src} className="baner__img" /> */}
             <div className="baner__container">
                 {slidesList()}
             </div>
