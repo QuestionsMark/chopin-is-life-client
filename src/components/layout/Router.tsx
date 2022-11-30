@@ -11,7 +11,7 @@ import { Profile } from '../../views/profile/Profile';
 import { Register } from '../../views/register/Register';
 import { Rules } from '../../views/rules/Rules';
 
-export const Main = () => {
+export const Router = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
