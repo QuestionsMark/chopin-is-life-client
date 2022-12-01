@@ -1,7 +1,12 @@
+import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { Main } from "../../components/layout/Main";
+
 export const ChopinCompetition = () => {
     return (
-        <main className="main chopin-competition">
-            Chopin Competition
-        </main>
+        <ContentWrapper>
+            <Main className="chopin-competition">
+                Chopin Competition
+            </Main>
+        </ContentWrapper>
     );
 };

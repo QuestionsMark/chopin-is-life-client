@@ -1,7 +1,12 @@
+import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { Main } from "../../components/layout/Main";
+
 export const NotFound = () => {
     return (
-        <main className="main not-found">
-            Error 404 not found!
-        </main>
+        <ContentWrapper>
+            <Main className="not-found">
+                Error 404 not found!
+            </Main>
+        </ContentWrapper>
     );
 };

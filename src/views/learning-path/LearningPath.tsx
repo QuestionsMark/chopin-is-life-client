@@ -1,7 +1,12 @@
+import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { Main } from "../../components/layout/Main";
+
 export const LearningPath = () => {
     return (
-        <main className="main learning-path">
-            Learning Paths
-        </main>
+        <ContentWrapper>
+            <Main className="learning-path">
+                Learning Paths
+            </Main>
+        </ContentWrapper>
     );
 };

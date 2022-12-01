@@ -1,7 +1,12 @@
+import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { Main } from "../../components/layout/Main";
+
 export const Rules = () => {
     return (
-        <main className="main rules">
-            Rules
-        </main>
+        <ContentWrapper>
+            <Main className="rules">
+                Rules
+            </Main>
+        </ContentWrapper>
     );
 };

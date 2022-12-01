@@ -1,7 +1,12 @@
+import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { Main } from "../../components/layout/Main";
+
 export const Profile = () => {
     return (
-        <main className="main profile">
-            User Profile
-        </main>
+        <ContentWrapper>
+            <Main className="profile">
+                Profile
+            </Main>
+        </ContentWrapper>
     );
 };
