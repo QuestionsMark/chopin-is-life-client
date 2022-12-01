@@ -6,8 +6,11 @@
 
     &__wrapper {
         width: calc(100vw - 30px);
-        max-width: 400px;
-        // margin-top: calc(var(--header-height) * -2);
+        max-width: 460px;
+        padding: 50px 30px;
+        border-radius: 10px;
+        background-color: $background-color;
+        box-shadow: 0 0 15px 9px $main-color;
     }
     
     &__form {
