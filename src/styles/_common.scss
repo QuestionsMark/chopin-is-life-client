@@ -38,7 +38,11 @@ body {
     margin: 0 auto;
 
     &--row {
-        flex-direction: row;
+        flex-direction: column;
+
+        @media (min-width: $lg-mobile) {
+            flex-direction: row;
+        }
     }
 }
 
@@ -50,7 +54,9 @@ body {
 
 .aside {
     flex-shrink: 0;
-    flex-basis: 340px;
+    @media (min-width: $lg-mobile) {
+        flex-basis: 340px;
+    }
 }
 
 .section {

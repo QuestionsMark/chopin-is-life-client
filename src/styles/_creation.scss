@@ -1,0 +1,45 @@
+.creation {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    &__link {
+        color: $light-font-color;
+        text-decoration: none;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        background-color: $background-color;
+
+        &:hover {
+            background-color: lighten($main-color2, 10%);
+        }
+
+        &-icon {
+            color: $main-color;
+            font-size: 36px;
+        }
+
+        &-information {
+            display: flex;
+            gap: 15px;
+            color: #ccc;
+        }
+
+        &-info {
+            font-size: 14px;
+
+            & > span {
+                font-weight: bold;
+            }
+        }
+    }
+}

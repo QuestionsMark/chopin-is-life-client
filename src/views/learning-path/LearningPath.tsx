@@ -24,7 +24,7 @@ export const LearningPath = () => {
         },
         {
             id: '0a48fd33-b414-4785-b121-fcf5297ec9ec',
-            title: 'Make Your Technic High Level',
+            title: 'Make Your Technique High Level',
         },
     ];
     //
