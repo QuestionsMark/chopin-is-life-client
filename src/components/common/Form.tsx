@@ -1,7 +1,7 @@
 import { FormEvent, ReactNode } from "react";
 
 interface Props {
-    errors: string[] | null;
+    errors?: string[] | null;
     children: ReactNode;
     className?: string;
     handleSubmit: () => Promise<void>;

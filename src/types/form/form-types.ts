@@ -1,3 +1,6 @@
+import { z } from 'zod';
+import { LoginSchema } from '../../utils/validation.util';
+
 export interface RegisterForm {
     password: string;
     passwordRepeat: string;
@@ -7,3 +10,5 @@ export interface RegisterForm {
     rulesAccepted: boolean; 
     // yearsOfPlayingPiano: number;
 }
+
+export type LoginForm = z.infer<typeof LoginSchema>

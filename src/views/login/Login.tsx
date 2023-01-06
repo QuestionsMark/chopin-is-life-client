@@ -11,14 +11,21 @@ import { Keyboard } from "./Keyboard";
 import { Button } from "../../components/common/Button";
 import { Main } from "../../components/layout/Main";
 import { ContentWrapper } from "../../components/layout/ContentWrapper";
+import { LoginForm } from "../../types";
+import { checkValidation, LoginSchema } from "../../utils/validation.util";
 
 export const Login = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false);
+    const [form, setForm] = useState<LoginForm>({
+        email: '',
+        password: '',
+        rememberMe: false,
+    });
 
     const handleSubmit = async () => {
-        console.log('Wysyłam...');
+        const errors = checkValidation(form, LoginSchema);
+        if (!errors) {
+            console.log('Wysyłam...');
+        }
     };
 
     return (
@@ -27,18 +34,17 @@ export const Login = () => {
                 <div className="login__wrapper">
                     <SoundBox />
                     <Form
-                        errors={null}
                         handleSubmit={handleSubmit}
                         className="login__form"
                         >
-                        <EmailInput handleChange={v => setEmail(v)} value={email} />
-                        <PasswordInput handleChange={v => setPassword(v)} value={password} />
+                        <EmailInput handleChange={v => setForm(state => ({ ...state, email: v }))} value={form.email} />
+                        <PasswordInput handleChange={v => setForm(state => ({ ...state, password: v }))} value={form.password} />
                         <Label
                             value="Remember me."
-                            onClick={() => setRemember(state => !state)}
+                            onClick={() => setForm(state => ({ ...state, rememberMe: !state.rememberMe }))}
                             className="login__label"
                         >
-                            <Checkbox checked={remember} />
+                            <Checkbox checked={form.rememberMe} />
                         </Label>
                         <Button>Login</Button>
                     </Form>
