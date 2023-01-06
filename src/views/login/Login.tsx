@@ -37,7 +37,7 @@ export const Login = () => {
                             value="Remember me."
                             onClick={() => setRemember(state => !state)}
                             className="login__label"
-                            >
+                        >
                             <Checkbox checked={remember} />
                         </Label>
                         <Button>Login</Button>

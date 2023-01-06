@@ -2,10 +2,10 @@ import { ReactNode } from "react";
 
 interface Props {
     children: ReactNode;
-    value?: ReactNode;
     className?: string;
     title?: string;
     titleClassName?: string;
+    value?: ReactNode;
     onClick?: () => void;
 }
 
